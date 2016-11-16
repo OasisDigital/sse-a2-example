@@ -1,31 +1,38 @@
-# SseA2Example
+# Example SSE Angular 2 Application
 
-This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.20-4.
+This project uses [angular-cli](https://github.com/angular/angular-cli).
 
-## Development server
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Its purpose is to demonstrate techniques for working with streaming data flow in
+a Angular 2 application. Its data comes from a server which generates fake
+foreign currency exchange data. You can get that server code from:
 
-## Code scaffolding
+<https://github.com/OasisDigital/sse-example-server>
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class`.
+## Running
 
-## Build
+First go also clone and run the example server linked above. Then:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+```
+npm install
+npm start
+```
 
-## Running unit tests
+<http://localhost:4200/>
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Contact
 
-## Running end-to-end tests
+Author:
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
+Kyle Cordes, @kylecordes, <http://kylecordes.com>
 
-## Deploying to Github Pages
+Angular Boot Camp training:
 
-Run `ng github-pages:deploy` to deploy to Github Pages.
+<https://angularbootcamp.com/>
 
-## Further help
+Our blog:
 
-To get more help on the `angular-cli` use `ng --help` or go check out the [Angular-CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+<http://blog.oasisdigital.com/>
+
+Our other services:
+
+<http://oasisdigital.com/>
