@@ -17,10 +17,6 @@ export class PairListComponent {
   constructor(fxDataService: FxDataService) {
     this.latestQuoteForEachSymbol = fxDataService.fxData
       .scan((acc, curr) => acc.set(curr.symbol, curr), new Map())
-      .map(acc => {
-        const arr = [];
-        acc.forEach(val =>  arr.push(val) );
-        return arr;
-      });
+      .map(acc => Array.from(acc.values()));
   }
 }
