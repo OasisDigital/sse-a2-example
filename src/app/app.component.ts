@@ -7,6 +7,7 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/observable/range';
 
 import { FxDataService } from './fx-data.service';
+import { FxQuote, placeholderQuote } from './fx-quote';
 
 @Component({
   selector: 'app-root',
@@ -14,11 +15,11 @@ import { FxDataService } from './fx-data.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  latest: Observable<any>;
+  latest: Observable<FxQuote[]>;
 
   constructor(fxDataService: FxDataService) {
     this.latest = Observable.concat(
-      Observable.range(1, 10).map(v => { }),
+      Observable.range(1, 10).map(v => placeholderQuote),
       fxDataService.fxData
       //.filter(fx => fx.symbol === 'EUR/USD')
     )
