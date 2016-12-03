@@ -7,10 +7,14 @@ import { AppComponent } from './app.component';
 import { FxDataService } from './fx-data.service';
 
 import { Sse } from './sse';
+import { PairHistoryComponent } from './pair-history/pair-history.component';
+import { PairHistoryViewComponent } from './pair-history-view/pair-history-view.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PairHistoryComponent,
+    PairHistoryViewComponent
   ],
   imports: [
     BrowserModule,
