@@ -1,2 +1,5 @@
-
-<p>{{ latest | async }}</p>
+<ul>
+  <li *ngFor="let q of latest | async">
+    {{ q | json }}
+  </li>
+</ul>

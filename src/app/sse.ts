@@ -12,7 +12,7 @@ export class Sse {
     return new Observable<any>(obs => {
       const es = new EventSource(sseUrl);
       es.onmessage = evt => {
-        const data = evt.data;
+        const data = JSON.parse(evt.data); // TODO handle parse error
         this.zone.run(() => obs.next(data));
       };
       return () => es.close();
