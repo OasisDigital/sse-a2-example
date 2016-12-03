@@ -1,4 +1,5 @@
-import { Component, NgZone } from '@angular/core';
+import { Component } from '@angular/core';
+import { Observable } from 'rxjs/Observable';
 
 import { Sse } from './sse';
 
@@ -9,9 +10,9 @@ import { Sse } from './sse';
   providers: [Sse]
 })
 export class AppComponent {
-  title = 'app works!';
+  latest: Observable<any>;
 
   constructor(sse: Sse) {
-    sse.observe('//localhost:8005/lowfreq').subscribe(d => this.title = d);
+    this.latest = sse.observe('//localhost:8005/lowfreq');
   }
 }
