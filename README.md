@@ -19,6 +19,10 @@ npm start
 
 <http://localhost:4200/>
 
+## Useful Links:
+
+[RxJS 5 Documentation](http://reactivex.io/rxjs/)
+
 ## Contact
 
 Author:
