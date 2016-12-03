@@ -9,12 +9,16 @@ import { FxDataService } from './fx-data.service';
 import { Sse } from './sse';
 import { PairHistoryComponent } from './pair-history/pair-history.component';
 import { PairHistoryViewComponent } from './pair-history-view/pair-history-view.component';
+import { PairListComponent } from './pair-list/pair-list.component';
+import { PairListViewComponent } from './pair-list-view/pair-list-view.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PairHistoryComponent,
-    PairHistoryViewComponent
+    PairHistoryViewComponent,
+    PairListComponent,
+    PairListViewComponent
   ],
   imports: [
     BrowserModule,
