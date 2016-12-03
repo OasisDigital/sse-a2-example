@@ -1,6 +1,7 @@
 <h3>{{ pair }}</h3>
-<ul>
-  <li *ngFor="let q of latestQuotes">
-    {{ q | json }}
-  </li>
-</ul>
+<table>
+  <tr *ngFor="let q of latestQuotes">
+    <td>{{ q.timestamp }}</td>
+    <td>{{ q.bid }}</td>
+  </tr>
+</table>
