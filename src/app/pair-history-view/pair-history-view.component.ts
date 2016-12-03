@@ -9,5 +9,5 @@ import { FxQuote } from '../fx-quote';
 })
 export class PairHistoryViewComponent {
   @Input() latestQuotes: FxQuote[];
-
+  @Input() pair: string;
 }
