@@ -1,7 +1,10 @@
 <h3>Symbol pairs:</h3>
 
 <table>
-  <tr *ngFor="let entry of list">
+  <tr>
+    <th>Pair</th>
+    <th>Bid</th>
+  </tr>  <tr *ngFor="let entry of list">
     <td>{{entry.symbol}}</td>
     <td> {{entry.bid}}</td>
   </tr>
