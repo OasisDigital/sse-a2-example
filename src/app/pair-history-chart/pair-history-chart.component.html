@@ -5,4 +5,11 @@
      [attr.height]="height - 2*margin" [attr.width]="width - 2*margin"
      style="fill:none;stroke:aquamarine" />
   <svg:circle *ngFor="let p of points" [attr.cx]="p.x" [attr.cy]="p.y" r="4" />
+  <svg:line *ngFor="let s of segments"
+    [attr.x1]="s[0].x"
+    [attr.y1]="s[0].y"
+    [attr.x2]="s[1].x"
+    [attr.y2]="s[1].y"
+    stroke-width="1"
+    stroke="grey" />
 </svg>

@@ -20,6 +20,7 @@ export class PairHistoryChartComponent implements OnChanges {
   margin = 8;
 
   points: Point[];
+  segments: Point[][];
 
   ngOnChanges() {
     const quotes = this.quotes
@@ -44,6 +45,8 @@ export class PairHistoryChartComponent implements OnChanges {
         x: this.margin + (q.timestamp - minTimestamp) * scaleTimestamps,
         y: this.margin + (parseFloat(q.bid) - minBid) * scaleBids
       }));
-  }
 
+    this.segments = this.points.slice(1).map((p, index) =>
+     [this.points[index], p]);
+  }
 }
