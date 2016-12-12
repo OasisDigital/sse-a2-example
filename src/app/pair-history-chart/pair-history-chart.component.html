@@ -1,3 +1,8 @@
-<p>
-  pair-history-chart works!
-</p>
+<h4>Chart for {{pair}}</h4>
+
+<svg [attr.height]="height" [attr.width]="width">
+  <svg:rect [attr.x]="margin" [attr.y]="margin"
+     [attr.height]="height - 2*margin" [attr.width]="width - 2*margin"
+     style="fill:none;stroke:aquamarine" />
+  <svg:circle *ngFor="let p of points" [attr.cx]="p.x" [attr.cy]="p.y" r="4" />
+</svg>
