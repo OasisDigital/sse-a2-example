@@ -7,7 +7,7 @@
         <th>Bid</th>
       </tr>
       <tr *ngFor="let q of latestQuotes">
-        <td>{{ q.timestamp }}</td>
+        <td>{{ q.timestamp | date:'mediumTime' }}</td>
         <td>{{ q.bid }}</td>
       </tr>
     </table>
