@@ -11,6 +11,7 @@ import { PairHistoryComponent } from './pair-history/pair-history.component';
 import { PairHistoryViewComponent } from './pair-history-view/pair-history-view.component';
 import { PairListComponent } from './pair-list/pair-list.component';
 import { PairListViewComponent } from './pair-list-view/pair-list-view.component';
+import { PairHistoryChartComponent } from './pair-history-chart/pair-history-chart.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { PairListViewComponent } from './pair-list-view/pair-list-view.component
     PairHistoryComponent,
     PairHistoryViewComponent,
     PairListComponent,
-    PairListViewComponent
+    PairListViewComponent,
+    PairHistoryChartComponent
   ],
   imports: [
     BrowserModule,

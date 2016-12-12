@@ -11,5 +11,11 @@
         <td>{{ q.bid }}</td>
       </tr>
     </table>
+
+    <app-pair-history-chart
+      width="300"
+      height="180"
+      [quotes]="latestQuotes"
+      [pair]="pair"></app-pair-history-chart>
   </div>
 </div>
