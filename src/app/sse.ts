@@ -1,9 +1,11 @@
 import { Injectable, NgZone } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 
 const EventSource: any = window['EventSource'];
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class Sse {
 
   constructor(private zone: NgZone) { }

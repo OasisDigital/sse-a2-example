@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/operator/map';
-import 'rxjs/add/operator/do';
-import 'rxjs/add/operator/scan';
+import { Observable } from 'rxjs';
+import { map, scan } from 'rxjs/operators';
 
 import { FxDataService } from '../fx-data.service';
 import { FxQuote } from '../fx-quote';
@@ -16,7 +14,10 @@ export class PairListComponent {
 
   constructor(fxDataService: FxDataService) {
     this.latestQuoteForEachSymbol = fxDataService.fxData
-      .scan((acc, curr) => acc.set(curr.symbol, curr), new Map())
-      .map(acc => Array.from(acc.values()));
+      .pipe(
+        scan((acc: Map<string, FxQuote>, curr: FxQuote) => acc.set(curr.symbol, curr),
+          new Map<string, FxQuote>()),
+        map(acc => Array.from(acc.values()))
+      );
   }
 }
