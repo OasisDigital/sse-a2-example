@@ -21,7 +21,7 @@ npm start
 
 ## Useful Links:
 
-[RxJS 5 Documentation](http://reactivex.io/rxjs/)
+[RxJS 6 Documentation](http://reactivex.io/rxjs/)
 
 ## Contact
 
