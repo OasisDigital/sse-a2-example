@@ -9,7 +9,4 @@ import { FxQuote } from '../fx-quote';
 })
 export class PairListViewComponent {
   @Input() list: FxQuote[];
-
-  constructor() { }
-
 }

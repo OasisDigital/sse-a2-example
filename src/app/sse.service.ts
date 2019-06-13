@@ -1,16 +1,14 @@
 import { Injectable, NgZone } from '@angular/core';
 import { Observable } from 'rxjs';
 
-const EventSource: any = window['EventSource'];
-
 @Injectable({
   providedIn: 'root'
 })
-export class Sse {
+export class SseService {
 
   constructor(private zone: NgZone) { }
 
-  observe(sseUrl: string): Observable<any> {
+  observe<T>(sseUrl: string): Observable<T> {
     return new Observable<any>(obs => {
       const es = new EventSource(sseUrl);
       es.onmessage = evt => {
